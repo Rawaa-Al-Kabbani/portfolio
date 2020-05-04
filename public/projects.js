@@ -20,12 +20,16 @@ async function createProjectsPage(content) {
           'projectDiv',
         );
         const projectTitle = utilsFunctions.createElementWithTextNode(projectDiv, 'p', project.key);
+        projectTitle.className = 'projectTitle';
         const projectAbout = utilsFunctions.createElementWithTextNode(
           projectDiv,
           'p',
           project.about,
         );
-        const projectLink = utilsFunctions.createElementWithTextNode(projectDiv, 'p', project.link);
+        projectAbout.className = 'projectAbout';
+        const projectLink = utilsFunctions.createElementWithTextNode(projectDiv, 'a', project.link);
+        projectLink.className = 'projectLink';
+        projectLink.href = project.link;
       });
     } else {
       alert('HTTP-Error: ' + response.status);
