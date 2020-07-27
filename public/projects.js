@@ -19,8 +19,9 @@ async function createProjectsPage(content) {
           'div',
           'projectDiv',
         );
-        const projectTitle = utilsFunctions.createElementWithTextNode(projectDiv, 'p', project.key);
+        const projectTitle = utilsFunctions.createElementWithTextNode(projectDiv, 'a', project.key);
         projectTitle.className = 'projectTitle';
+        projectTitle.href = project.link;
         const projectAbout = utilsFunctions.createElementWithTextNode(
           projectDiv,
           'p',

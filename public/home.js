@@ -13,7 +13,7 @@ function createHomePage(content) {
   const paragraph = createElementWithTextNode(
     home,
     'p',
-    'I am a very curious person that also happens to be a software developer. I am always looking to learn something new.',
+    'I am a very curious and creative person that also happens to be a software developer. I am always looking to improve myself and learn something new.',
   );
 }
 export { createHomePage };
